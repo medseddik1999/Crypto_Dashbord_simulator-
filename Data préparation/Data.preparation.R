@@ -1,6 +1,7 @@
 ###data preparation ##   
 
-library(dplyr) 
+library(dplyr)  
+library(stringr)
    
 ds=list.files("/Users/midou/Desktop/coin_data") 
 
