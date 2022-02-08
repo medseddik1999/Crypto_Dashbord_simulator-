@@ -30,7 +30,7 @@ from tqdm import tqdm
 #loop to get data  
 
 for coin in tqdm(paire_name) :  
-    interval_time=Client.KLINE_INTERVAL_1HOUR 
+    interval_time=Client.KLINE_INTERVAL_1DAY 
     date_for_start = "01/01/2017" 
     giveme=Client().get_historical_klines(coin,interval_time,date_for_start)
     df=pd.DataFrame(giveme ,columns=["timestamp","open","high","low","close","volume","closetime","quote_avg","trades","tp","tv","dt2"] )
