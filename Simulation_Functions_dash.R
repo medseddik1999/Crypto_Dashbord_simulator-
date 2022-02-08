@@ -224,9 +224,9 @@ Dash_Simule=function(m,coiin=0,pair,stg='Trix' ,df=DAta_coin){
   
 }
 #stg = 'Trix' or 'SuperTrend' or 'AwosomeOs'
-plot(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'SuperTrend')$portfolio , type='l')    
-lines(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'Trix')$portfolio , type='l') 
-lines(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'AwosomeOs')$portfolio , type='l')  
+#plot(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'SuperTrend')$portfolio , type='l')    
+#lines(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'Trix')$portfolio , type='l') 
+#lines(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'AwosomeOs')$portfolio , type='l')  
 
 
 
