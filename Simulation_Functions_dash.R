@@ -1,16 +1,22 @@
+#Lucas dans ce script t'aura besion just d'une fonction et de la comprendre c'est la fonction Dash simule tu dois mettre en input le montant , et la paire name  
+#et la stratgy pour la paire name il faut précise dans l'input que (paire ='XRPUSDT' 
+#il faut pas ecrire 'XRPUSDT SEULE' sinon la fonction comprendra pas et prendra btc par défaut 
+#pour Avoir la fonction just excute cette commande :  
+#==> source("https://raw.githubusercontent.com/medseddik1999/Crypto_Dashbord_simulator-/main/Simulation_Functions_dash.R")
 
 
 DAta_coin=read.csv('https://raw.githubusercontent.com/medseddik1999/Crypto_Dashbord_simulator-/main/Stratgy_Dash/Dash_all_indicators_optimised.csv')
 rownames(DAta_coin)=as.Date(DAta_coin$timestamp)  
-ds=list.files("/Users/midou/Desktop/coin_data") 
 
-coin_names =c()  
-for (item in ds) {
-  name=str_split(item , ".csv" ,simplify = TRUE)[1]   
-  coin_names <- c(coin_names, name)
-}
+#ds=list.files("/Users/midou/Desktop/coin_data") 
+
+#coin_names =c()  
+#for (item in ds) {
+#  name=str_split(item , ".csv" ,simplify = TRUE)[1]   
+#  coin_names <- c(coin_names, name)
+#}
  
-
+coin_names=c("BTCUSDT" , "DASHUSDT" ,"ETHUSDT"  ,"LTCUSDT" , "XMRUSDT"  ,"XRPUSDT"  ,"ZRXUSDT" )
 
 ##-----Some functions to use------ 
 fuss=function(name ,col){
