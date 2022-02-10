@@ -6,7 +6,7 @@
 
 library(stringr) 
 
-DAta_coin=read.csv('https://github.com/medseddik1999/Crypto_Dashbord_simulator-/blob/main/Stratgy_Dash/dash_final_tab.csv')
+DAta_coin=read.csv('https://raw.githubusercontent.com/medseddik1999/Crypto_Dashbord_simulator-/main/Stratgy_Dash/dash_final_tab.csv')
  
 #ds=list.files("/Users/midou/Desktop/coin_data") 
 
@@ -272,7 +272,7 @@ simulate_Arima(1407,name='BTCUSDT' ,df=DAta_coin)
 
 
 
-Dash_Simule=function(m,coiin=0,pair,stg='Trix' ,df1){ 
+Dash_Simule=function(m,coiin=0,pair,stg='Trix' ,df1=DAta_coin){ 
   if (if_trix(stg)==TRUE){ 
     return(simulate_trix(m ,name = pair ,df=df1)) 
   } 
@@ -287,6 +287,12 @@ Dash_Simule=function(m,coiin=0,pair,stg='Trix' ,df1){
     print("please make sure about stg name :stg = 'Trix' or 'SuperTrend' or 'AwosomeOs'") 
   }
 } 
+
+
+
+#stg = 'Trix' or 'SuperTrend' or 'AwosomeOs' or 'ArimaPred'
+#lines(Dash_Simule(1000 , pair = 'DASHUSDT' ,stg = 'Trix')$portfolio , type='l') 
+#Dash_Simule(1000 , pair = 'XRPUSDT' ,stg = 'SuperTrend' ,df=DAta_coin) 
 
 
 
