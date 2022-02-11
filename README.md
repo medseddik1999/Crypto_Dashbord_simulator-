@@ -3,7 +3,8 @@
 the Link to the dashbord : https://lucasjeanneau.shinyapps.io/CryptoDashboard/
 
 
-#1. Motivation of the dashboard.
+# 1. Motivation of the dashboard.
+
 Our idea behind this Dashboard was threefold. First, we wanted to have an overview of the
 cryptocurrency market: what are the main currencies, what are their histories and how much
 they cost today and how much they have costed in the past. Second, we wanted to simulate
@@ -44,7 +45,7 @@ The total number of bitcoins that will be put into circulation is limited to 21 
 17 million have already been created. The price of this cryptocurrency has exploded during the
 last 4 years. 
 
-##Dash:
+## Dash:
 
 Dash is a digital currency created in 2014 by Evan Duffield. The ambition of Dash developers
 is to offer a totally decentralized digital alternative to cash, it has the same characteristics as
@@ -66,7 +67,7 @@ of developers are building apps on Ethereum for the finance, entertainment, clou
 estate industries. The Ethereum blockchain developer community is one of the largest and
 most active in the world.
 
-##0x (ZRX):
+## 0x (ZRX):
 
 The 0x was founded in 2016 by Will Warren and Amir Bandeali.
 0x is a protocol of the Ethereum blockchain which aims to facilitate decentralized transactions
@@ -83,7 +84,7 @@ takes around 10 minutes to confirm a block) so it is better positioned for every
 As such, with the growing number of websites and companies accepting e-money as a form
 of payment, it could be considered “real money”, rather than just a way to transfer value.
 
-##Monero (XMR):
+## Monero (XMR):
 
 The Monero project was developed by a team of 7 developers, of which only 3 have a known
 identity: Francisco "ArticMine" Cabañas, David Latapie and Riccardo Spagni, who is the
@@ -95,7 +96,7 @@ The concept of complete anonymity was still theoretical when Monero was launched
 digital currency of the Monero blockchain. 
 
 
-#2.b. Presentation of the indicators used in the strategies
+# 2. b. Presentation of the indicators used in the strategies
 
 The indicators we decided to implement are the following:
 
@@ -150,7 +151,8 @@ We build three deferent super trend direction and:
 We can add also some additional condition to have more precision. 
 
 
-TRIX:
+# TRIX:
+
 The Triple Exponential Moving Average (TRIX) is a powerful technical analysis tool designed
 to help traders determine the momentum of a price as well as identify overbought and oversold
 conditions of an underlying financial asset.
@@ -169,20 +171,22 @@ the exponential moving average (EMA) of the second series. This results in the t
 series, known as DX.
 After calculating the third series, the next step is to calculate its first derivative, or rate of
 change. From this we get the TRIX value:
-TRIX = (DX i+1 – DX i ) / DX i+1
-Signal = EMA(TRIX)
+                 
+                  TRIX = (DX i+1 – DX i ) / DX i+1
+                  Signal = EMA(TRIX)
 - A positive TRIX line means there is bullish momentum
 - A negative TRIX line means there is bearish momentum
 - A large positive TRIX means the market is overbought
 - A large negative TRIX means the market is oversold
 - A crossing of the TRIX line and the signal line signifies a trend reversal
 - A TRIX zero-line crossover usually occurs after a trend swing
-The strategy:
+### The strategy:
+ 
  ➔ We buy when TRIX >Signal
  ➔ We sell when TRIX < Signal
 We can add also some additional condition to have more precision.
 
-##Awesome Oscillator (AO):
+## Awesome Oscillator (AO):
 
 The AO is a popular market momentum indicator developed by American financial analyst Bill
 Williams. It is an unlimited indicator anchored around a zero line and displayed as a histogram
@@ -193,8 +197,10 @@ predict possible trend reversals.
 The awesome oscillator looks at the last five bars on a candlestick chart in comparison with
 the previous 34. The value is then calculated by the difference in simple moving average (SMA)
 over these two timeframes. The awesome oscillator formula is as follows:
-    Median price = (High price of a session + low price of a session) ÷ 2
-    Awesome oscillator = 5 period simple moving average (median price) – 34 period simple
+           
+           Median price = (High price of a session + low price of a session) ÷ 2
+           Awesome oscillator = 5 period simple moving average (median price) – 34 period simple
+
 moving average (median price)
 NOTE: The simple moving average is determined by adding the median price for each day in
 the period and dividing it by the total number of days in that period.
@@ -204,7 +210,9 @@ When the five-day SMA is above the 34 period SMA, the value generated in the his
 above the zero line and a bull market is indicated.
 When the opposite situation occurs and the value of the histogram falls below the zero line,
 the short-term average is below the long-term average and a bear market is indicated.
- The strategy:
+ 
+ ### The strategy:
+
 We build three deferent super trend direction and:
 
  ➔ We buy when AO ≥ 0
@@ -229,7 +237,8 @@ queries for example we select the best parameters for train and test data and if
 similar row into this data frames. We put parameters of this row as the optimum of the
 strategy indicators.  
 
-#2.d. Prediction
+# 2.d. Prediction
+
 Our idea was to build a model that will be capable to predict the feature values of the
 portfolio by predicting the prices of each coin separately. The prediction of time series is
 always a task that requires a preprocessing such as looking for trends, for seasonality and
@@ -254,7 +263,7 @@ represented by the following equation:
 Where 𝑌𝑡−𝑖 are all lagged prediction going from d to t-p and 𝜀𝑡−𝑗 are all lagged forecast errors
 going from d to t-q.  
 
-#4. Limitations.
+# 4. Limitations.
 
 If we must criticize our project, we could make the following remarks:
 ➔ We use days as an interval between items. It can be a limitation because we miss some
@@ -264,7 +273,7 @@ poor.
 ➔ Some technical problem in dashboards and errors.
 ➔ Optimization is not the best because we didn’t split data set by more than two.
 
-#5. Discussion and Conclusion.
+# 5. Discussion and Conclusion.
 
 Globally, even if there is still errors/bug in the Dashboard, we are quite satisfied of the work
 we did. The only things we didn’t add to the project is mainly due to time constraint. If we had
