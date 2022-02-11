@@ -28,11 +28,11 @@ because we have a weak computational resource. We simplify our dashboard to host
 free server. At the end we only have a data frame with all prices, indictors and strategies
 (167 columns).
 
-#2.a Presentation of the cryptocurrencies used in the project
+# 2.a Presentation of the cryptocurrencies used in the project
 
 The 6 cryptocurrencies we decided to implement in our Dashboard are:
 
-##Bitcoin (BTC):
+## Bitcoin (BTC):
 
 The Bitcoin is without any doubt the most famous one. It is a crypto currency created in 2008
 by Satoshi Nakamoto, a pseudonym behind which hides one or more individuals never
