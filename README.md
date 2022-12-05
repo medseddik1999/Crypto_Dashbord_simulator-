@@ -1,6 +1,6 @@
 # Crypto_Dashbord_simulator- 
 
-the Link to the dashbord : https://lucasjeanneau.shinyapps.io/CryptoDashboard/
+the Link to the dashbord : https://yw93hx-midou-seddik.shinyapps.io/Crypto_Dashbord_simulator/ 
 
 
 # 1. Motivation of the dashboard.
